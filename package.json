@@ -1,0 +1,19 @@
+{
+  "name": "g2-server",
+  "version": "1.0.0",
+  "description": "Server for ERP System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rasnerk/G2-Server.git"
+  },
+  "author": "Keifer Rasner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rasnerk/G2-Server/issues"
+  },
+  "homepage": "https://github.com/rasnerk/G2-Server#readme"
+}
