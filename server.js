@@ -16,8 +16,12 @@ app.use(
 )
 
 // -- Routes -- //
+app.get('/', (req,res) => {
+    res.send('G2')
+})
+app.use('/seeders', require('./routes/seeders/index'))
 
 // Database Connection & Server Start -- //
-mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then( () => app.listen(process.env.PORT, () => console.log(`Database Connected : Server running`)) )
     .catch( (err) => console.log(err.message) )
