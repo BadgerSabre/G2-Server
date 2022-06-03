@@ -17,7 +17,7 @@
 
 ## Schemas
 
-### department
+### department:
 
 ```
 const departmentSchema = new mongoose.Schema({
@@ -34,7 +34,7 @@ const departmentSchema = new mongoose.Schema({
 })
 ```
 
-### employee
+### employee:
 
 ```
 const employeeSchema = new mongoose.Schema({
@@ -73,6 +73,35 @@ const employeeSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+})
+```
+
+### inventory:
+
+```
+const inventorySchema = new mongoose.Schema({
+    pid: {
+        type: Number,
+        unique: true,
+        required: true
+    },
+    inStock: {
+        type: Number,
+        default: 0
+    },
+    location: {
+        type: String,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    vmi: {
+        type: Boolean,
+        default: false
+    }
 })
 ```
 
