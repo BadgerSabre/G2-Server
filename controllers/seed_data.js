@@ -5,6 +5,9 @@ const employeesData = require('../db/seeders/employee_seeder')
 // inventory stuff
 const Inventory = require('../db/schemas/inventory')
 const inventoryData = require('../db/seeders/inventory_seeder')
+// Departments
+const Department = require('../db/schemas/departments')
+const departmentsData = require('../db/seeders/departments_seeder')
 
 // Do NOT run this again
 const seedEmployeesData = (req,res) => {
@@ -41,4 +44,11 @@ const seedInventoryData = (req,res) => {
     })
 }
 
-module.exports = { seedEmployeesData, hashEmployeePass, fetchAllEmployees, seedInventoryData }
+const seedDepartments = (req,res) => {
+    Department.insertMany(departmentsData, (err,docs) => {
+        if (err) return res.send(err)
+        res.json(docs)
+    })
+}
+
+module.exports = { seedEmployeesData, hashEmployeePass, fetchAllEmployees, seedInventoryData, seedDepartments }

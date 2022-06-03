@@ -8,12 +8,12 @@
 | ------------- | ------------- |
 | departments   | employees     |
 | employees     | none          |
-| inventories   | undecided     |
+| inventories   | maybe vendors |
 | opportunities | undecided     |
-| part          | undecided     |
-| products      | undecided     |
-| projects      | undecided     |
-| vendors       | undecided     |
+| catalogs      | products      |
+| products      | none          |
+| projects      | inventory, maybe catalog |
+| vendors       | none          |
 
 ## Schemas
 

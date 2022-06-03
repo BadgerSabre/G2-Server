@@ -311,64 +311,82 @@ module.exports = [
         name: "CNC Machined Part - J" 
     },
     {
+        pid: 30016,
+        inStock: 100,
+        location: "L-012-04",
+        name: "CNC Machined Part - AA" 
+    },
+    {
+        pid: 30017,
+        inStock: 100,
+        location: "L-012-05",
+        name: "CNC Machined Part - BB" 
+    },
+    {
+        pid: 30018,
+        inStock: 100,
+        location: "L-012-06",
+        name: "CNC Machined Part - CC" 
+    },
+    {
         pid: 40001,
         inStock: 100,
         location: "L-005-03",
-        name: "Electrical Item - A" 
+        name: "Electrical Sub-Component - A" 
     },
     {
         pid: 40002,
         inStock: 100,
         location: "L-005-04",
-        name: "Electrical Item - B" 
+        name: "Electrical Sub-Component - B" 
     },
     {
         pid: 40003,
         inStock: 100,
         location: "L-005-05",
-        name: "Electrical Item - C" 
+        name: "Electrical Sub-Component - C" 
     },
     {
         pid: 40004,
         inStock: 100,
         location: "L-005-06",
-        name: "Electrical Item - D" 
+        name: "Electrical Sub-Component - D" 
     },
     {
         pid: 40005,
         inStock: 100,
         location: "L-005-07",
-        name: "Electrical Item - E" 
+        name: "Electrical Sub-Component - E" 
     },
     {
         pid: 40006,
         inStock: 100,
         location: "L-005-08",
-        name: "Electrical Item - F" 
+        name: "Electrical Sub-Component - F" 
     },
     {
         pid: 40007,
         inStock: 100,
         location: "L-005-09",
-        name: "Electrical Item - G" 
+        name: "Electrical Sub-Component - G" 
     },
     {
         pid: 40008,
         inStock: 100,
         location: "L-005-10",
-        name: "Electrical Item - H" 
+        name: "Electrical Sub-Component - H" 
     },
     {
         pid: 40009,
         inStock: 100,
         location: "L-008-01",
-        name: "Electrical Item - I" 
+        name: "Electrical Sub-Component - I" 
     },
     {
         pid: 400010,
         inStock: 100,
         location: "L-008-02",
-        name: "Electrical Item - J" 
+        name: "Electrical Sub-Component - J" 
     },
     {
         pid: 400011,
@@ -434,61 +452,67 @@ module.exports = [
         pid: 50001,
         inStock: 100,
         location: "L-006-01",
-        name: "Assembly Item - A" 
+        name: "Assembly Sub-Component - A" 
     },
     {
         pid: 50002,
         inStock: 100,
         location: "L-006-02",
-        name: "Assembly Item - B" 
+        name: "Assembly Sub-Component - B" 
     },
     {
         pid: 50003,
         inStock: 100,
         location: "L-006-03",
-        name: "Assembly Item - C" 
+        name: "Assembly Sub-Component - C" 
     },
     {
         pid: 50004,
         inStock: 100,
         location: "L-006-04",
-        name: "Assembly Item - D" 
+        name: "Assembly Sub-Component - D" 
     },
     {
         pid: 50005,
         inStock: 100,
         location: "L-006-05",
-        name: "Assembly Item - E" 
+        name: "Assembly Sub-Component - E" 
     },
     {
         pid: 50006,
         inStock: 100,
         location: "L-006-06",
-        name: "Assembly Item - F" 
+        name: "Assembly Sub-Component - F" 
     },
     {
         pid: 50007,
         inStock: 100,
         location: "L-006-07",
-        name: "Assembly Item - G" 
+        name: "Assembly Sub-Component - G" 
     },
     {
         pid: 50008,
         inStock: 100,
         location: "L-006-08",
-        name: "Assembly Item - H" 
+        name: "Assembly Sub-Component - H" 
     },
     {
         pid: 50009,
         inStock: 100,
         location: "L-006-09",
-        name: "Assembly Item - I" 
+        name: "Assembly Sub-Component - I" 
     },
     {
         pid: 50010,
         inStock: 100,
         location: "L-006-10",
-        name: "Assembly Item - J" 
+        name: "Assembly Sub-Component - J" 
+    },
+    {
+        pid: 500021,
+        inStock: 100,
+        location: "L-012-06",
+        name: "Assembly Sub-Component - AA" 
     },
     {
         pid: 50011,
@@ -710,5 +734,83 @@ module.exports = [
         location: "L-012-03",
         name: "Electrical Computer Chip - J",
         vmi: true 
+    },
+    {
+        pid: 70001,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - A",
+    },
+    {
+        pid: 70002,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - B",
+    },
+    {
+        pid: 70003,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - C",
+    },
+    {
+        pid: 70004,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - D",
+    },
+    {
+        pid: 70005,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - E",
+    },
+    {
+        pid: 70006,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - F",
+    },
+    {
+        pid: 70007,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - G",
+    },
+    {
+        pid: 70008,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - H",
+    },
+    {
+        pid: 70009,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - I",
+    },
+    {
+        pid: 70010,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - J",
+    },
+    {
+        pid: 700011,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Sand Blast Component - AA",
+    },
+    {
+        pid: 70012,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Painted Component - A",
+    },
+    {
+        pid: 70013,
+        inStock: 100,
+        location: "Paint Shop",
+        name: "Painted Component - AA",
     },
 ]
