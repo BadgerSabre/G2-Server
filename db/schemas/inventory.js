@@ -12,13 +12,16 @@ const inventorySchema = new mongoose.Schema({
     },
     location: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     name: {
         type: String,
         required: true,
         unique: true
+    },
+    vmi: {
+        type: Boolean,
+        default: false
     }
 })
 

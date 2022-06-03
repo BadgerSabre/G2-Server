@@ -251,6 +251,66 @@ module.exports = [
         name: "CNC Raw Material - E" 
     },
     {
+        pid: 30006,
+        inStock: 100,
+        location: "L-007-01",
+        name: "CNC Machined Part - A" 
+    },
+    {
+        pid: 30007,
+        inStock: 100,
+        location: "L-007-02",
+        name: "CNC Machined Part - B" 
+    },
+    {
+        pid: 30008,
+        inStock: 100,
+        location: "L-007-03",
+        name: "CNC Machined Part - C" 
+    },
+    {
+        pid: 30009,
+        inStock: 100,
+        location: "L-007-04",
+        name: "CNC Machined Part - D" 
+    },
+    {
+        pid: 30010,
+        inStock: 100,
+        location: "L-007-05",
+        name: "CNC Machined Part - E" 
+    },
+    {
+        pid: 30011,
+        inStock: 100,
+        location: "L-007-06",
+        name: "CNC Machined Part - F" 
+    },
+    {
+        pid: 30012,
+        inStock: 100,
+        location: "L-007-07",
+        name: "CNC Machined Part - G" 
+    },
+    {
+        pid: 30013,
+        inStock: 100,
+        location: "L-007-08",
+        name: "CNC Machined Part - H" 
+    },
+    {
+        pid: 30014,
+        inStock: 100,
+        location: "L-007-09",
+        name: "CNC Machined Part - I" 
+    },
+    {
+        pid: 30015,
+        inStock: 100,
+        location: "L-007-10",
+        name: "CNC Machined Part - J" 
+    },
+    {
         pid: 40001,
         inStock: 100,
         location: "L-005-03",
@@ -297,5 +357,358 @@ module.exports = [
         inStock: 100,
         location: "L-005-10",
         name: "Electrical Item - H" 
+    },
+    {
+        pid: 40009,
+        inStock: 100,
+        location: "L-008-01",
+        name: "Electrical Item - I" 
+    },
+    {
+        pid: 400010,
+        inStock: 100,
+        location: "L-008-02",
+        name: "Electrical Item - J" 
+    },
+    {
+        pid: 400011,
+        inStock: 100,
+        location: "L-011-01",
+        name: "Electrical Component - A" 
+    },
+    {
+        pid: 400012,
+        inStock: 100,
+        location: "L-011-02",
+        name: "Electrical Component - B" 
+    },
+    {
+        pid: 400013,
+        inStock: 100,
+        location: "L-011-03",
+        name: "Electrical Component - C" 
+    },
+    {
+        pid: 400014,
+        inStock: 100,
+        location: "L-011-04",
+        name: "Electrical Component - D" 
+    },
+    {
+        pid: 400015,
+        inStock: 100,
+        location: "L-011-05",
+        name: "Electrical Component - E" 
+    },
+    {
+        pid: 400016,
+        inStock: 100,
+        location: "L-011-06",
+        name: "Electrical Component - F" 
+    },
+    {
+        pid: 400017,
+        inStock: 100,
+        location: "L-011-07",
+        name: "Electrical Component - G" 
+    },
+    {
+        pid: 400018,
+        inStock: 100,
+        location: "L-011-08",
+        name: "Electrical Component - H" 
+    },
+    {
+        pid: 400019,
+        inStock: 100,
+        location: "L-011-09",
+        name: "Electrical Component - I" 
+    },
+    {
+        pid: 400020,
+        inStock: 100,
+        location: "L-011-10",
+        name: "Electrical Component - J" 
+    },
+    {
+        pid: 50001,
+        inStock: 100,
+        location: "L-006-01",
+        name: "Assembly Item - A" 
+    },
+    {
+        pid: 50002,
+        inStock: 100,
+        location: "L-006-02",
+        name: "Assembly Item - B" 
+    },
+    {
+        pid: 50003,
+        inStock: 100,
+        location: "L-006-03",
+        name: "Assembly Item - C" 
+    },
+    {
+        pid: 50004,
+        inStock: 100,
+        location: "L-006-04",
+        name: "Assembly Item - D" 
+    },
+    {
+        pid: 50005,
+        inStock: 100,
+        location: "L-006-05",
+        name: "Assembly Item - E" 
+    },
+    {
+        pid: 50006,
+        inStock: 100,
+        location: "L-006-06",
+        name: "Assembly Item - F" 
+    },
+    {
+        pid: 50007,
+        inStock: 100,
+        location: "L-006-07",
+        name: "Assembly Item - G" 
+    },
+    {
+        pid: 50008,
+        inStock: 100,
+        location: "L-006-08",
+        name: "Assembly Item - H" 
+    },
+    {
+        pid: 50009,
+        inStock: 100,
+        location: "L-006-09",
+        name: "Assembly Item - I" 
+    },
+    {
+        pid: 50010,
+        inStock: 100,
+        location: "L-006-10",
+        name: "Assembly Item - J" 
+    },
+    {
+        pid: 50011,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - A" 
+    },
+    {
+        pid: 50012,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - B" 
+    },
+    {
+        pid: 50013,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - C" 
+    },
+    {
+        pid: 50014,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - D" 
+    },
+    {
+        pid: 50015,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - E" 
+    },
+    {
+        pid: 50016,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - F" 
+    },
+    {
+        pid: 50017,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - G" 
+    },
+    {
+        pid: 50018,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - H" 
+    },
+    {
+        pid: 50019,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - I" 
+    },
+    {
+        pid: 50020,
+        inStock: 100,
+        location: "Shop Floor",
+        name: "Assembly Component - J" 
+    },
+    {
+        pid: 60001,
+        inStock: 100,
+        location: "L-009-01",
+        name: "Bolts - A",
+        vmi: true 
+    },
+    {
+        pid: 60002,
+        inStock: 100,
+        location: "L-009-02",
+        name: "Bolts - B" ,
+        vmi: true
+    },
+    {
+        pid: 60003,
+        inStock: 100,
+        location: "L-009-03",
+        name: "Bolts - C",
+        vmi: true 
+    },
+    {
+        pid: 60004,
+        inStock: 100,
+        location: "L-009-04",
+        name: "Bolts - D",
+        vmi: true 
+    },
+    {
+        pid: 60005,
+        inStock: 100,
+        location: "L-009-05",
+        name: "Screws - A",
+        vmi: true 
+    },
+    {
+        pid: 60006,
+        inStock: 100,
+        location: "L-009-06",
+        name: "Screws - B",
+        vmi: true 
+    },
+    {
+        pid: 60007,
+        inStock: 100,
+        location: "L-009-07",
+        name: "Screws - C",
+        vmi: true 
+    },
+    {
+        pid: 60008,
+        inStock: 100,
+        location: "L-009-08",
+        name: "Screws - D",
+        vmi: true 
+    },
+    {
+        pid: 60009,
+        inStock: 100,
+        location: "L-009-09",
+        name: "Nuts - A",
+        vmi: true 
+    },
+    {
+        pid: 60010,
+        inStock: 100,
+        location: "L-009-10",
+        name: "Nuts - B",
+        vmi: true 
+    },
+    {
+        pid: 60011,
+        inStock: 100,
+        location: "L-010-01",
+        name: "Nuts - C",
+        vmi: true 
+    },
+    {
+        pid: 60012,
+        inStock: 100,
+        location: "L-010-02",
+        name: "Nuts - D",
+        vmi: true 
+    },
+    {
+        pid: 60013,
+        inStock: 100,
+        location: "L-010-03",
+        name: "Safety Glasses",
+        vmi: true 
+    },
+    {
+        pid: 60014,
+        inStock: 100,
+        location: "L-010-04",
+        name: "Electrical Computer Chip - A",
+        vmi: true 
+    },
+    {
+        pid: 60015,
+        inStock: 100,
+        location: "L-010-05",
+        name: "Electrical Computer Chip - B",
+        vmi: true 
+    },
+    {
+        pid: 60016,
+        inStock: 100,
+        location: "L-010-06",
+        name: "Electrical Computer Chip - C",
+        vmi: true 
+    },
+    {
+        pid: 60017,
+        inStock: 100,
+        location: "L-010-07",
+        name: "Electrical Computer Chip - D",
+        vmi: true 
+    },
+    {
+        pid: 60018,
+        inStock: 100,
+        location: "L-010-08",
+        name: "Electrical Computer Chip - E",
+        vmi: true 
+    },
+    {
+        pid: 60019,
+        inStock: 100,
+        location: "L-010-09",
+        name: "Electrical Computer Chip - F",
+        vmi: true 
+    },
+    {
+        pid: 60020,
+        inStock: 100,
+        location: "L-010-10",
+        name: "Electrical Computer Chip - G",
+        vmi: true 
+    },
+    {
+        pid: 60021,
+        inStock: 100,
+        location: "L-012-01",
+        name: "Electrical Computer Chip - H",
+        vmi: true 
+    },
+    {
+        pid: 60022,
+        inStock: 100,
+        location: "L-012-02",
+        name: "Electrical Computer Chip - I",
+        vmi: true 
+    },
+    {
+        pid: 60023,
+        inStock: 100,
+        location: "L-012-03",
+        name: "Electrical Computer Chip - J",
+        vmi: true 
     },
 ]

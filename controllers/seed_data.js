@@ -1,6 +1,10 @@
-const Employee = require('../db/schemas/employees')
 const bcrypt = require('bcrypt');
+// employee stuff
+const Employee = require('../db/schemas/employees')
 const employeesData = require('../db/seeders/employee_seeder')
+// inventory stuff
+const Inventory = require('../db/schemas/inventory')
+const inventoryData = require('../db/seeders/inventory_seeder')
 
 // Do NOT run this again
 const seedEmployeesData = (req,res) => {
@@ -28,4 +32,13 @@ const fetchAllEmployees = async (req,res) => {
     let passwords = empl.map(e => e.password)
     res.json({total: total, pass: passwords})
 }
-module.exports = { seedEmployeesData, hashEmployeePass, fetchAllEmployees }
+
+// Do NOT run this again
+const seedInventoryData = (req,res) => {
+    Inventory.insertMany(inventoryData, (err,docs) => {
+        if (err) return res.send(err)
+        res.json(docs)
+    })
+}
+
+module.exports = { seedEmployeesData, hashEmployeePass, fetchAllEmployees, seedInventoryData }
