@@ -29,74 +29,11 @@ const catalogSchema = new mongoose.Schema({})
 
 ### employee:
 
-```
-const employeeSchema = new mongoose.Schema({
-    dept_number: {
-        type: Number,
-        required: true
-    },
-    email: {
-        type: String,
-        unique: true
-    },
-    first_name:{
-        type: String,
-        required: true
-    },
-    id_num: {
-        type: Number,
-        required: true,
-        unique: true
-    },
-    last_name: {
-        type: String,
-        required: true
-    },
-    password: String,
-    pay: {
-        type: Number,
-        default: 0
-    },
-    salary: {
-        type: Boolean,
-        default: false
-    },
-    start_date: Date,
-    wc_id: {
-        type: Number,
-        required: true
-    },
-})
-```
+![Employee Schema](./docs/imgs/employee-schema.PNG)
 
 ### inventory:
 
-```
-const inventorySchema = new mongoose.Schema({
-    pid: {
-        type: Number,
-        unique: true,
-        required: true
-    },
-    inStock: {
-        type: Number,
-        default: 0
-    },
-    location: {
-        type: String,
-        required: true
-    },
-    name: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    vmi: {
-        type: Boolean,
-        default: false
-    }
-})
-```
+![Inventory Schema](./docs/imgs/inventory-schema.PNG)
 
 ### opportunity
 
