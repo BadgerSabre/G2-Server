@@ -16,7 +16,7 @@ const Department = require('../db/schemas/department')
 const customerServiceData = require('../db/seeders/departments/customer_service')
 const engineeringData = require('../db/seeders/departments/engineering')
 const financialData = require('../db/seeders/departments/financial')
-const infastructureData = require('../db/seeders/departments/infastructure')
+const infastructureData = require('../db/seeders/departments/infrastructure')
 const operationsData = require('../db/seeders/departments/operations')
 const productionData = require('../db/seeders/departments/production')
 

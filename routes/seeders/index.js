@@ -17,7 +17,7 @@ router.get('/inventory/weld', seeders.InventoryController.seedWeldParts )
 router.get('/departments/customerservice', seeders.DepartmentsController.seedCustomerService )
 router.get('/departments/engineering', seeders.DepartmentsController.seedEngineering )
 router.get('/departments/financial', seeders.DepartmentsController.seedFinancial )
-router.get('/departments/infastructure', seeders.DepartmentsController.seedInfastructure )
+router.get('/departments/infrastructure', seeders.DepartmentsController.seedInfastructure )
 router.get('/departments/operations', seeders.DepartmentsController.seedOperations )
 router.get('/departments/production', seeders.DepartmentsController.seedProduction )
 

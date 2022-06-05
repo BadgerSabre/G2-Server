@@ -5,12 +5,12 @@ module.exports = [
         work_centers: [
             {
                 work_center: "Human Resources",
-                employees: [],
+                employees: ['6299088ec4e412101c368eaa', '6299088ec4e412101c368eab'],
                 wc_id: 601
             },
             {
                 work_center: "Project Management",
-                employees: [],
+                employees: ['6299088ec4e412101c368eac'],
                 wc_id: 602
             },
             {
