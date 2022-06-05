@@ -25,7 +25,7 @@ const catalogSchema = new mongoose.Schema({})
 
 ### department:
 
-![Department Schema](./docs/imgs/departments-schema.PNG)
+![Department Schema](./docs/imgs/Capture.PNG)
 
 ### employee:
 
