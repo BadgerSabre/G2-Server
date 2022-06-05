@@ -1,7 +1,9 @@
 module.exports = [
     {
         name: "Machine A",
-        required_parts: [],
+        required_parts: [
+            { pid: 30006, num_required: 4 }
+        ],
         required_jobs: {
             "JOB-01A-00": {
                 tasks: {
@@ -9,8 +11,12 @@ module.exports = [
                         order_num: 1,
                         sub_jobs: {
                             "CNC-01A-01": {
+                                materials: [{
+                                    material: "62994d77f46faeab4fc7dfe3",
+                                    num_required: 4 
+                                }],
                                 parts_produced: 4,
-                                pid: 30006,
+                                part_ref: '62994d77f46faeab4fc7dfe8',
                                 hours_per_part: 0.5
                             },
                             "CNC-01A-02": {
