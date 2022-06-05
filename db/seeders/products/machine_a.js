@@ -58,13 +58,11 @@ module.exports = [
                     "ASM-01A-00": {
                         order_num: 4,
                         sub_jobs: {
-                            //A
                             "ASM-01A-01": {
                                 parts_produced: 2,
                                 pid: 50001,
                                 hours_per_part: 0.5
                             },
-                            //AA
                             "ASM-01A-02": {
                                 parts_produced: 2,
                                 pid: 500021,
@@ -111,48 +109,4 @@ module.exports = [
             },
         },
     },
-    {
-        name: "Machine B",
-        required_parts: [],
-        required_jobs: {},
-    },
-    {
-        name: "Machine C",
-        required_parts: [],
-        required_jobs: {},
-    },    {
-        name: "Machine D",
-        required_parts: [],
-        required_jobs: {},
-    },
-    {
-        name: "Machine E",
-        required_parts: [],
-        required_jobs: {},
-    },
-    {
-        name: "Machine F",
-        required_parts: [],
-        required_jobs: {},
-    },
-    {
-        name: "Machine G",
-        required_parts: [],
-        required_jobs: {},
-    },
-    {
-        name: "Machine H",
-        required_parts: [],
-        required_jobs: {},
-    },
-    {
-        name: "Machine I",
-        required_parts: [],
-        required_jobs: {},
-    },
-    {
-        name: "Machine J",
-        required_parts: [],
-        required_jobs: {},
-    }
 ]
