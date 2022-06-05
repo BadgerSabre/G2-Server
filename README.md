@@ -4,7 +4,7 @@
 
 ### Collections
 
-| Collection    | Relational    |
+| Collection    | Reference(s)  |
 | ------------- | ------------- |
 | departments   | employees     |
 | employees     | none          |
@@ -17,19 +17,41 @@
 
 ## Schemas
 
+### catalog:
+
+```
+const catalogSchema = new mongoose.Schema({})
+```
+
 ### department:
 
 ```
 const departmentSchema = new mongoose.Schema({
-    dept_id: Number,
-    dept_name: String,
+    dept_id: {
+        type: Number,
+        unique: true,
+        required: true
+    },
+    dept_name: {
+        type: String,
+        unique: true,
+        required: true
+    },
     work_centers: [{
-        work_center: String,
+        work_center: {
+            type: String,
+            unique: true
+        },
         employees: [{
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Employee'
+            ref: 'Employee',
+            unique: true
         }],
-        wc_id: Number
+        wc_id: {
+            type: Number,
+            unique: true,
+            required: true
+        }
     }]
 })
 ```
@@ -105,11 +127,28 @@ const inventorySchema = new mongoose.Schema({
 })
 ```
 
+### opportunity
+
+```
+const opportunitySchema = new mongoose.Schema({})
+```
+
+### product
+
+```
+const productSchema = new mongoose.Schema({})
+```
+
+### vendor
+
+```
+const vendorSchema = new mongoose.Schema({})
+```
 
 ## Routings
 
-| Route         | Type          | Description   |
+| Type          | Route         | Description   |
 | ------------- | ------------- | ------------- |
-| /             | GET           | ?             |
-| /             | GET           | ?             |
-| /             | GET           | ?             |
+| GET           | /             | ?             |
+| GET           | /             | ?             |
+| GET           | /             | ?             |

@@ -1,12 +1,12 @@
 const bcrypt = require('bcrypt');
 // employee stuff
-const Employee = require('../db/schemas/employees')
+const Employee = require('../db/schemas/employee')
 const employeesData = require('../db/seeders/employee_seeder')
 // inventory stuff
 const Inventory = require('../db/schemas/inventory')
 const inventoryData = require('../db/seeders/inventory_seeder')
 // Departments
-const Department = require('../db/schemas/departments')
+const Department = require('../db/schemas/department')
 const departmentsData = require('../db/seeders/departments_seeder')
 
 // Do NOT run this again
