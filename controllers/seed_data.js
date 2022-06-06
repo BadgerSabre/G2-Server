@@ -19,6 +19,40 @@ const financialData = require('../db/seeders/departments/financial')
 const infastructureData = require('../db/seeders/departments/infrastructure')
 const operationsData = require('../db/seeders/departments/operations')
 const productionData = require('../db/seeders/departments/production')
+// -- Materials -- //
+const Material = require('../db/schemas/material')
+const CNCRawMatA = require('../db/seeders/materials/CNC_Raw_Mat_A')
+const CNCRawMatA02 = require('../db/seeders/materials/CNC_Raw_Mat_A_02')
+// -- Sub Jobs -- //
+const SubJob = require('../db/schemas/subjob')
+const CNC_01A_01 = require('../db/seeders/subjobs/CNC-01A-01')
+const CNC_01A_02 = require('../db/seeders/subjobs/CNC-01A-02')
+const WELD_01A_01 = require('../db/seeders/subjobs/WELD-01A-01')
+const FIN_01A_01 = require('../db/seeders/subjobs/FIN-01A-01')
+const FIN_01A_02 = require('../db/seeders/subjobs/FIN-01A-02')
+const FIN_02A_01 = require('../db/seeders/subjobs/FIN-02A-01')
+const FIN_02A_02 = require('../db/seeders/subjobs/FIN-02A-02')
+const ASM_01A_01 = require('../db/seeders/subjobs/ASM-01A-01')
+const ASM_01A_02 = require('../db/seeders/subjobs/ASM-01A-02')
+const ASM_01A_03 = require('../db/seeders/subjobs/ASM-01A-03')
+const ELEC_01A_01 = require('../db/seeders/subjobs/ELEC-01A-01')
+const ELEC_01A_02 = require('../db/seeders/subjobs/ELEC-01A-02')
+const TEST_01A_01 = require('../db/seeders/subjobs/TEST-01A-01')
+// -- Tasks -- //
+const Task = require('../db/schemas/task')
+const CNC_01A_00 = require('../db/seeders/tasks/CNC-01A-00')
+const WELD_01A_00 = require('../db/seeders/tasks/WELD-01A-00')
+const FIN_01A_00 = require('../db/seeders/tasks/FIN-01A-00')
+const FIN_02A_00 = require('../db/seeders/tasks/FIN-02A-00')
+const ASM_01A_00 = require('../db/seeders/tasks/ASM-01A-00')
+const ELEC_01A_00 = require('../db/seeders/tasks/ELEC-01A-00')
+const TEST_01A_00 = require('../db/seeders/tasks/TEST-01A-00')
+// -- Jobs -- //
+const Job = require('../db/schemas/job')
+const JOB_01A_00 = require('../db/seeders/jobs/job-01A')
+// -- Product Schema & Data -- //
+const Product = require('../db/schemas/product')
+const machineA = require('../db/seeders/products/machine_a')
 
 // -- Employee Related Functions -- //
 const EmployeesController = {
@@ -46,7 +80,6 @@ const EmployeesController = {
         res.json({total: total, pass: passwords})
     }
 }
-
 // -- Inventory Related Functions -- //
 const InventoryController = {
     seedAssemblyParts : (req,res) => {
@@ -92,7 +125,6 @@ const InventoryController = {
         })
     }
 }
-
 // -- Department Related Functions -- //
 const DepartmentsController = {
     seedCustomerService : (req,res) => {
@@ -132,6 +164,118 @@ const DepartmentsController = {
         })
     }
 }
+// -- Materials -- //
+const MaterialsController = {
+    seedRawMatA : async (req,res) => {
+        const matA = await Material.create(CNCRawMatA);
+        res.json(matA)
+    },
+    seedRawMatA02 : async (req,res) => {
+        const matA02 = await Material.create(CNCRawMatA02);
+        res.json(matA02)
+    }
+}
+// -- Sub Jobs -- //
+const SubJobsController = {
+    seedCNCA : async (req,res) => {
+        const CNC_SJ = await SubJob.create(CNC_01A_01)
+        res.json(CNC_SJ)
+    },
+    seedCNCA02 : async (req,res) => {
+        const CNC_SJ = await SubJob.create(CNC_01A_02)
+        res.json(CNC_SJ)
+    },
+    seedWELD01A : async (req,res) => {
+        const WELD_SJ = await SubJob.create(WELD_01A_01)
+        res.json(WELD_SJ)
+    },
+    seedFIN01A01 : async (req,res) => {
+        const FIN_SJ = await SubJob.create(FIN_01A_01)
+        res.json(FIN_SJ)
+    },
+    seedFIN01A02 : async (req,res) => {
+        const FIN_SJ = await SubJob.create(FIN_01A_02)
+        res.json(FIN_SJ)
+    },
+    seedFIN02A01 : async (req,res) => {
+        const FIN_SJ = await SubJob.create(FIN_02A_01)
+        res.json(FIN_SJ)
+    },
+    seedFIN02A02 : async (req,res) => {
+        const FIN_SJ = await SubJob.create(FIN_02A_02)
+        res.json(FIN_SJ)
+    },
+    seedASM01A01 : async (req,res) => {
+        const ASM_SJ = await SubJob.create(ASM_01A_01)
+        res.json(ASM_SJ)
+    },
+    seedASM01A02 : async (req,res) => {
+        const ASM_SJ = await SubJob.create(ASM_01A_02)
+        res.json(ASM_SJ)
+    },
+    seedASM01A03 : async (req,res) => {
+        const ASM_SJ = await SubJob.create(ASM_01A_03)
+        res.json(ASM_SJ)
+    },
+    seedELEC01A01 : async (req,res) => {
+        const ELEC_SJ = await SubJob.create(ELEC_01A_01)
+        res.json(ELEC_SJ)
+    },
+    seedELEC01A02 : async (req,res) => {
+        const ELEC_SJ = await SubJob.create(ELEC_01A_02)
+        res.json(ELEC_SJ)
+    },
+    seedTEST01A01 : async (req,res) => {
+        const TEST_SJ = await SubJob.create(TEST_01A_01)
+        res.json(TEST_SJ)
+    }
+}
+// -- Tasks -- //
+const TasksController = {
+    seedCNC01A : async (req,res) => {
+        const CNC_01A = await Task.create(CNC_01A_00);
+        res.json(CNC_01A)
+    },
+    seedWELD01A : async (req,res) => {
+        const WELD_01A = await Task.create(WELD_01A_00);
+        res.json(WELD_01A)
+    },
+    seedFIN01A : async (req,res) => {
+        const FIN_01A = await Task.create(FIN_01A_00);
+        res.json(FIN_01A)
+    },
+    seedFIN02A : async (req,res) => {
+        const FIN_02A = await Task.create(FIN_02A_00);
+        res.json(FIN_02A)
+    },
+    seedASM01A : async (req,res) => {
+        const ASM_01A = await Task.create(ASM_01A_00);
+        res.json(ASM_01A)
+    },
+    seedELEC01A : async (req,res) => {
+        const ELEC_01A = await Task.create(ELEC_01A_00);
+        res.json(ELEC_01A)
+    },
+    seedTEST01A : async (req,res) => {
+        const TEST_01A = await Task.create(TEST_01A_00);
+        res.json(TEST_01A)
+    }
+}
+// -- Jobs -- //
+const JobsController = {
+    seedJob01A : async (req,res) => {
+        const JOB_01A = await Job.create(JOB_01A_00)
+        res.json(JOB_01A)
+    }
+}
+// -- Products -- //
+const ProductsController = {
+    seedMachA : async (req,res) => {
+        const machA = await Product.create(machineA);
+        res.json(machA)
+    }
+}
+
 
 // -- Export All Functions -- //
-module.exports = { EmployeesController, InventoryController, DepartmentsController }
+module.exports = { EmployeesController, InventoryController, DepartmentsController, MaterialsController, SubJobsController, TasksController, JobsController, ProductsController }
