@@ -20,7 +20,7 @@ app.get('/', (req,res) => {
     res.send('G2')
 })
 app.use('/seeders', require('./routes/seeders/index'))
-
+app.use('/temp', require('./routes/temp'))
 // Database Connection & Server Start -- //
 mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then( () => app.listen(process.env.PORT, () => console.log(`Database Connected : Server running`)) )

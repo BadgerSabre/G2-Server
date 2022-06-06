@@ -22,6 +22,10 @@ const inventorySchema = new mongoose.Schema({
     vmi: {
         type: Boolean,
         default: false
+    },
+    price: {
+        type: Number,
+        default: 0
     }
 })
 
