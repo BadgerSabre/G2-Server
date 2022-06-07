@@ -1,0 +1,4 @@
+module.exports = {
+    job: "JOB-01C-00",
+    tasks: ["629f663dc6acd32827b07b45", "629f6882e71391e8be660c31", "629f6c8293ef3986a4b16a57", "629f71d3ba264d25890921de", "629f74c91ff6a67d790a5072", "629f7af4d74dd949b2193e96"]
+}

@@ -5,10 +5,16 @@ module.exports = [
     //     location: "Shop Floor",
     //     name: "Machine - A",
     // },
+    // {
+    //     pid: 90002,
+    //     inStock: 0,
+    //     location: "Shop Floor",
+    //     name: "Machine - B",
+    // },
     {
-        pid: 90002,
+        pid: 90003,
         inStock: 0,
         location: "Shop Floor",
-        name: "Machine - B",
+        name: "Machine - C",
     }
 ]
