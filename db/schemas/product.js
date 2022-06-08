@@ -54,24 +54,24 @@ productSchema.methods.getEstimatedTime = async function () {
 
 productSchema.methods.getEstimatedPrice = async function () {
     const data = await this.populateData();
-    let estimated_time = await this.getEstimatedTime();
+    const estimated_time = await this.getEstimatedTime();
+    const profit_margin = 0.15;
+    const average_pay = 20;
     let estimated_price = 0;
 
-    // will need to get average pay of each dept? or just hard code it?
-    // Calculate labor cost
-    estimated_price += estimated_time * 20;
+    // -- Calculate Estimated labor cost -- //
+    estimated_price += estimated_time * average_pay;
 
     data.required_jobs.forEach(job => {
         job.tasks.forEach(task => {
             task.sub_jobs.forEach(sj => {
-                // This conditional Check will go away once all parts have a price
-                if (sj.part_ref.price) {
-                    estimated_price += sj.part_ref.price * sj.parts_produced; 
-                }
+                estimated_price += sj.part_ref.price * sj.parts_produced; 
             })
         })
     })
-    
+
+    // -- Factor in % to meet a profit margin -- //
+    estimated_price = ( estimated_price * (1 + profit_margin) ).toFixed(2);
     return estimated_price;
 }
 

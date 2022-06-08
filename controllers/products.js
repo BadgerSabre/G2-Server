@@ -1,4 +1,4 @@
-// -- Product Schema & Data -- //
+// -- Product Schema -- //
 const Product = require('../db/schemas/product')
 
 const ProductController = {
@@ -9,7 +9,7 @@ const ProductController = {
             const doc = await Product.create(req.body)
             res.json(doc)
         } catch (err) {
-            if (err.code === 11000) res.status(400).json({ message: `Product: ${req.body.name} already exists. Cannot have duplicate products.`})
+            if (err.code === 11000) res.status(400).json({ message: `Product: ${req.body.name} already exists. Name field must be unique.`})
             res.status(500).json({ message: err })
         }
     },
@@ -20,7 +20,7 @@ const ProductController = {
             const docs = await Product.find();
             res.json(docs)
         } catch (err) {
-            if (err) res.status(500).json({ message: err })
+            res.status(500).json({ message: err })
         }
 
     },
@@ -29,9 +29,10 @@ const ProductController = {
     fetchProductById : async (req,res) => {
         try {
             const doc = await Product.findById(req.params.id)
+            if (doc === null) return res.json({ message: "Couldn't find that Product! Make sure the Product you're looking for exists"})
             res.json(doc)
         } catch (err) {
-            if (err) res.status(500).json({ message: err })
+            res.status(500).json({ message: err.message })
         }
     },
 
@@ -39,9 +40,10 @@ const ProductController = {
     fetchProductByName : async (req,res) => {
         try {
             const doc = await Product.findOne({name: req.params.name})
+            if (doc === null) return res.json({ message: "Couldn't find that Product! Make sure the Product you're looking for exists"})
             res.json(doc)
         } catch (err) {
-            if (err) res.status(500).json({ message: err })
+            res.status(500).json({ message: err })
         }
     },
 
@@ -81,10 +83,10 @@ const ProductController = {
     populateTime : async (req,res) => {
         try {
             const doc = await Product.findById(req.params.id)
-            let time = await doc.getEstimatedTime();
+            const time = await doc.getEstimatedTime();
             res.json({ estimated_time: time })
         } catch (err) {
-            if (err) res.status(500).json({ message: err })
+            res.status(500).json({ message: err })
         }
     },
 
@@ -92,10 +94,11 @@ const ProductController = {
     populatePrice : async (req,res) => {
         try {
             const doc = await Product.findById(req.params.id)
-            let price = await doc.getEstimatedPrice();
+            const price = await doc.getEstimatedPrice();
             res.json({ estimated_price: price })
         } catch (err) {
-            if (err) res.status(500).json({ message: err })
+            console.log(err)
+            res.status(500).json({ message: err })
         }
     },
 
@@ -103,10 +106,10 @@ const ProductController = {
     populateParts : async (req,res) => {
         try {
             const doc = await Product.findById(req.params.id)
-            let parts = await doc.getRequiredParts();
+            const parts = await doc.getRequiredParts();
             res.json(parts)
         } catch (err) {
-            if (err) res.status(500).json({ message: err })
+            res.status(500).json({ message: err })
         }
     }
 
