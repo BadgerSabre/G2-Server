@@ -19,6 +19,7 @@ app.use(
 app.get('/', (req,res) => {
     res.send('G2')
 })
+app.use('/employees', require('./routes/employees'))
 app.use('/seeders', require('./routes/seeders/index'))
 app.use('/temp', require('./routes/temp'))
 // Database Connection & Server Start -- //

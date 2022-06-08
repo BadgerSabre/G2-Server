@@ -31,7 +31,10 @@ const employeeSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    start_date: Date,
+    start_date: {
+        type: Date,
+        default: Date.now()
+    },
     wc_id: {
         type: Number,
         required: true
