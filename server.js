@@ -16,12 +16,10 @@ app.use(
 )
 
 // -- Routes -- //
-app.get('/', (req,res) => {
-    res.send('G2')
-})
-app.use('/employees', require('./routes/employees'))
-app.use('/seeders', require('./routes/seeders/index'))
-app.use('/temp', require('./routes/temp'))
+app.get('/', (req,res) => res.send('Welcome to the G2 API...') )
+app.use('/seeders', require('./routes/seeders/index') )
+app.use('/products', require('./routes/products') )
+
 // Database Connection & Server Start -- //
 mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then( () => app.listen(process.env.PORT, () => console.log(`Database Connected : Server running`)) )
