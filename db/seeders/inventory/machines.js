@@ -16,5 +16,11 @@ module.exports = [
         inStock: 0,
         location: "Shop Floor",
         name: "Machine - C",
+    },
+    {
+        pid: 90004,
+        inStock: 0,
+        location: "Shop Floor",
+        name: "Machine - D",
     }
 ]

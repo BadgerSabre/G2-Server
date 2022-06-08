@@ -1,7 +1,4 @@
-module.exports = [
-    {
-        name: "Machine D",
-        required_parts: [],
-        required_jobs: {},
-    }
-]
+module.exports = {
+    name: "Machine - D",
+    required_jobs: ["62a0bf47f29fd2e1df534781"]
+}
