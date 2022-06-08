@@ -8,6 +8,7 @@
     - Remove an existing employee (DELETE)
 */
 
+// -- To dos -- //
 /* 
     - Create an EmployeesController as an object
     - Create functions for each of the required above ^, as keys in the EmployeesController 
