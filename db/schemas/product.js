@@ -32,9 +32,12 @@ productSchema.methods.populateData = async function () {
 
 productSchema.methods.getEstimatedTime = async function () {
     const data = await this.populateData()
+    // let subjobs = data.required_jobs.map(job => {
+    //     return job.tasks.map(task => task.sub_jobs)
+    // })
+    // let subjobs = tasks.map(task => task.sub_jobs)
 
     let estimated_time = 0;
-
     data.required_jobs.forEach(job => {
         job.tasks.forEach(task => {
             task.sub_jobs.forEach(sj => {
