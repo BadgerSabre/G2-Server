@@ -14,6 +14,10 @@
 | POST    | /products            | Creates a new Product |
 | PUT     | /products/:id        | Updates given fields in Product |
 | DELETE  | /products/:id        | Finds a Product that matches :id & Deletes it |
+| GET     | /subjobs             | Returns all subjobs in collection |
+| GET     | /subjobs/:id         | Returns SubJob that matches :id |
+| POST    | /subjobs             | Creates a new SubJob |
+| PUT     | /subjobs/:id         | Updates SubJob given :id |
 
 ## Database
 
