@@ -1,7 +1,10 @@
 const mongoose = require('mongoose')
 
 const subjobSchema = new mongoose.Schema({
-    sub_job: String,
+    sub_job: {
+        type: String,
+        unique: true
+    },
     materials: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Material"
