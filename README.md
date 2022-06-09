@@ -28,7 +28,8 @@
 
 
 ### Materials
-
+| Type    | Route                | Description   |
+| ------- | -------------------- | ------------- |
 | Type    | Route                | Description   |
 | GET     | /materials           | Fetches All Materials in Collection |
 | GET     | /materials/:id       | Fetches Material That Matches :id |
