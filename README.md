@@ -2,6 +2,32 @@
 
 ## Routings
 
+### Customers
+
+| Type    | Route                | Description   |
+| ------- | -------------------- | ------------- |
+| GET     | /customers           | Fetches All Customers in Collection |
+| GET     | /customers/:id       | Fetches Customer That Matches :id |
+| POST    | /customers           | Creates a New Customer |
+| PUT     | /customers/:id       | Updates an Existing Customer |
+
+### Materials
+| Type    | Route                | Description   |
+| ------- | -------------------- | ------------- |
+| Type    | Route                | Description   |
+| GET     | /materials           | Fetches All Materials in Collection |
+| GET     | /materials/:id       | Fetches Material That Matches :id |
+| POST    | /materials           | Creates a New Material |
+
+### Opportunities
+
+| Type    | Route                | Description   |
+| ------- | -------------------- | ------------- |
+| GET     | /opp                 | Fetches All Opportunities in Collection |
+| GET     | /opp/:id             | Fetches Opportunity That Matches :id |
+| POST    | /opp                 | Creates a New Opportunity |
+| PUT     | /opp/:id             | Updates an Existing Opportunity |
+
 ### Products
 
 | Type    | Route                | Description   |
@@ -17,6 +43,16 @@
 | PUT     | /products/:id        | Updates an Existing Product |
 | DELETE  | /products/:id        | Finds a Product That Matches :id & Deletes it |
 
+### Projects
+
+| Type    | Route                 | Description   |
+| ------- | --------------------  | ------------- |
+| GET     | /projects             | Fetches All Projects in Collection |
+| GET     | /projects/dates/:type | Fetches All Projects Within a date range :type |
+| GET     | /projects/:id         | Fetches Project That Matches :id |
+| POST    | /projects             | Creates a New Project |
+| PUT     | /projects/:id         | Updates an Existing Project |
+
 ### Sub Jobs
 
 | Type    | Route                | Description   |
@@ -25,33 +61,6 @@
 | GET     | /subjobs/:id         | Fetches SubJob That Matches :id |
 | POST    | /subjobs             | Creates a New SubJob |
 | PUT     | /subjobs/:id         | Updates an Existing SubJob |
-
-
-### Materials
-| Type    | Route                | Description   |
-| ------- | -------------------- | ------------- |
-| Type    | Route                | Description   |
-| GET     | /materials           | Fetches All Materials in Collection |
-| GET     | /materials/:id       | Fetches Material That Matches :id |
-| POST    | /materials           | Creates a New Material |
-
-### Customers
-
-| Type    | Route                | Description   |
-| ------- | -------------------- | ------------- |
-| GET     | /customers           | Fetches All Customers in Collection |
-| GET     | /customers/:id       | Fetches Customer That Matches :id |
-| POST    | /customers           | Creates a New Customer |
-| PUT     | /customers/:id       | Updates an Existing Customer |
-
-### Opportunities
-
-| Type    | Route                | Description   |
-| ------- | -------------------- | ------------- |
-| GET     | /opp                 | Fetches All Opportunities in Collection |
-| GET     | /opp/:id             | Fetches Opportunity That Matches :id |
-| POST    | /opp                 | Creates a New Opportunity |
-| PUT     | /opp/:id             | Updates an Existing Opportunity |
 
 ## Database
 
