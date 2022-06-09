@@ -14,7 +14,7 @@ const SubJobController = {
     },
 
     // -- Returns all documents in the collection: 'subjobs'
-    findAllSubJobs : async (req,res) => {
+    fetchAllSubJobs : async (req,res) => {
         try {
             const subjobs = await SubJob.find()
             res.json(subjobs)
@@ -24,7 +24,7 @@ const SubJobController = {
     },
 
     // -- Returns one Sub Job Given: ObjectId -- //
-    findOneSubJob : async (req,res) => {
+    fetchOneSubJob : async (req,res) => {
         try {
             const doc = await SubJob.findById(req.params.id)
             res.json(doc)
