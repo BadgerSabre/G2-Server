@@ -2,6 +2,8 @@
 
 ## Routings
 
+### Products
+
 | Type    | Route                | Description   |
 | ------- | -------------------- | ------------- |
 | GET     | /                    | Welcome Message |
@@ -14,17 +16,37 @@
 | POST    | /products            | Creates a New Product |
 | PUT     | /products/:id        | Updates an Existing Product |
 | DELETE  | /products/:id        | Finds a Product That Matches :id & Deletes it |
+
+### Sub Jobs
+
+| Type    | Route                | Description   |
+| ------- | -------------------- | ------------- |
 | GET     | /subjobs             | Fetches All SubJobs in Collection |
 | GET     | /subjobs/:id         | Fetches SubJob That Matches :id |
 | POST    | /subjobs             | Creates a New SubJob |
 | PUT     | /subjobs/:id         | Updates an Existing SubJob |
+
+
+### Materials
+
+| Type    | Route                | Description   |
 | GET     | /materials           | Fetches All Materials in Collection |
 | GET     | /materials/:id       | Fetches Material That Matches :id |
 | POST    | /materials           | Creates a New Material |
+
+### Customers
+
+| Type    | Route                | Description   |
+| ------- | -------------------- | ------------- |
 | GET     | /customers           | Fetches All Customers in Collection |
 | GET     | /customers/:id       | Fetches Customer That Matches :id |
 | POST    | /customers           | Creates a New Customer |
 | PUT     | /customers/:id       | Updates an Existing Customer |
+
+### Opportunities
+
+| Type    | Route                | Description   |
+| ------- | -------------------- | ------------- |
 | GET     | /opp                 | Fetches All Opportunities in Collection |
 | GET     | /opp/:id             | Fetches Opportunity That Matches :id |
 | POST    | /opp                 | Creates a New Opportunity |
@@ -36,22 +58,24 @@
 
 | Collection    | Reference(s)  |
 | ------------- | ------------- |
+| customers     | projects, opportunities |
 | departments   | employees     |
 | employees     | none          |
 | inventories   | maybe vendors |
-| opportunities | undecided     |
-| catalogs      | products      |
-| products      | none          |
-| projects      | inventory, maybe catalog |
-| vendors       | none          |
+| jobs          | tasks         |
+| materials     | inventories, maybe subjobs? |
+| opportunities | employees, customers, projects |
+| products      | jobs          |
+| projects      | products      |
+| subjobs       | materials, inventories |
+| tasks         | subjobs       |
+| tokens        | none          |
+| vendors       | undecided     |
 
 ## Schemas
 
-### catalog:
+### customer:
 
-```
-const catalogSchema = new mongoose.Schema({})
-```
 
 ### department:
 
@@ -65,17 +89,28 @@ const catalogSchema = new mongoose.Schema({})
 
 ![Inventory Schema](./docs/imgs/inventory-schema.PNG)
 
-### opportunity
+### job:
+
+### material:
+
+### opportunity:
 
 ```
 const opportunitySchema = new mongoose.Schema({})
 ```
 
-### product
+### product:
 
 ```
 const productSchema = new mongoose.Schema({})
 ```
+### project:
+
+### subjob:
+
+### task:
+
+### token:
 
 ### vendor
 
