@@ -18,6 +18,9 @@
 | GET     | /subjobs/:id         | Returns SubJob that matches :id |
 | POST    | /subjobs             | Creates a new SubJob |
 | PUT     | /subjobs/:id         | Updates SubJob given :id |
+| GET     | /materials           | Returns all Materials in collection |
+| GET     | /materials/:id       | Returns Material that matches :id |
+| POST    | /materials           | Creates a new Material |
 
 ## Database
 
