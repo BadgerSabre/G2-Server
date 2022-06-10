@@ -22,10 +22,11 @@ const customerSchema = new mongoose.Schema({
         type: String,
     },
     purchases: [{
-        type: mongoose.Schema.Types.ObjectId
+        type: mongoose.Schema.Types.ObjectId,
     }],
     pending_opportunities: [{
-        type: mongoose.Schema.Types.ObjectId
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Opportunity"
     }]
 
 })
