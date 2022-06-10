@@ -53,6 +53,25 @@
 | POST    | /opp                 | Creates a New Opportunity |
 | PUT     | /opp/:id             | Updates an Existing Opportunity |
 
+### Departments
+
+| Type   | Route                 | Description   |
+| ------ | --------------------- | ------------- |
+| GET    | /departments          | Fetches All Departments in Collection |
+| GET    | /departments/:id      | Fetches Department that Matches :id |
+| POST   | /departments          | Creates a New Department |
+| PUT    | /departments/:id      | Updates an Existing Department |
+
+### Employees
+
+| Type   | Route                  | Desciption    |
+| ------ | ---------------------- | ------------- |
+| GET    | /employees             | Fetches All Employees in Collection |
+| GET    | /employees/:id         | Fetches Employee that Matches :id |
+| POST   | /employees             | Creates a New Employee |
+| PUT    | /employees/:id         | Updates an Existing Employee |
+| DELETE | /employees/:id         | Finds Employee that Matches Id & Deletes it |
+
 ## Database
 
 ### Collections
