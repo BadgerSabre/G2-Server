@@ -116,7 +116,7 @@
 | GET    | /vendors/:id           | Fetches Vendor that Matches :id |
 | POST   | /vendors               | Creates a New Vendor |
 | PUT    | /vendors/:id           | Updates an Existing Vendor |
-| DELETE | /vendors/:id           | Finds Vendor that Matches :id & Deltes it
+| DELETE | /vendors/:id           | Finds Vendor that Matches :id & Deletes it |
 
 ## Database
 
