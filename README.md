@@ -106,7 +106,17 @@
 | GET    | /employees/:id         | Fetches Employee that Matches :id |
 | POST   | /employees             | Creates a New Employee |
 | PUT    | /employees/:id         | Updates an Existing Employee |
-| DELETE | /employees/:id         | Finds Employee that Matches Id & Deletes it |
+| DELETE | /employees/:id         | Finds Employee that Matches :id & Deletes it |
+
+### Vendors
+
+| Type   | Route                  | Description   |
+| ------ | ---------------------- | ------------- |
+| GET    | /vendors               | Fetches All Vendors in Collection |
+| GET    | /vendors/:id           | Fetches Vendor that Matches :id |
+| POST   | /vendors               | Creates a New Vendor |
+| PUT    | /vendors/:id           | Updates an Existing Vendor |
+| DELETE | /vendors/:id           | Finds Vendor that Matches :id & Deletes it |
 
 ## Database
 
@@ -126,7 +136,7 @@
 | subjobs       | materials, inventories |
 | tasks         | subjobs       |
 | tokens        | none          |
-| vendors       | undecided     |
+| vendors       | inventories   |
 
 ## Schemas
 

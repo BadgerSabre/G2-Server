@@ -43,8 +43,6 @@ const DepartmentController = {
             res.status(500).json({ message: error })
         }
     }
-
-    // Finish PUT controller and add routes for departments
 }
 
 module.exports = DepartmentController
