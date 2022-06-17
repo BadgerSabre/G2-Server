@@ -4,9 +4,21 @@ const ProjectsController = {
 
     fetchAllProjects : async (req,res) => {
         try {
+            let temp = []
             const projects = await Project.find()
-            res.json(projects)
+
+            for (const project in projects) {
+                const { name, ship_date } = projects[project]
+
+                const time = await projects[project].getEstimatedTime()
+                const jobs = await projects[project].getRequiredJobs()
+ 
+                temp.push({ name: name, estimated_time: time, ship_date: ship_date, required_jobs: jobs })
+            }
+
+            res.json(temp)
         } catch (err) {
+            console.log(err)
             res.status(500).json({ message: err })
         }
     },

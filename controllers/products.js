@@ -17,7 +17,23 @@ const ProductController = {
     // -- Fetches all Products in the Database -- //
     fetchAllProducts : async (req,res) => {
         try {
-            const docs = await Product.find();
+            const docs = await Product.find()
+                .populate({
+                    path: 'required_jobs',
+                    model: 'Job',
+                    populate: {
+                        path: "tasks",
+                        model: "Task",
+                        populate: {
+                            path: "sub_jobs",
+                            model: "SubJob",
+                            populate: {
+                                path: "part_ref",
+                                model: "Inventory"
+                            }
+                        }
+                    }
+                })
             res.json(docs)
         } catch (err) {
             res.status(500).json({ message: err })
