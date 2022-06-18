@@ -1,22 +1,26 @@
 const Project = require('../db/schemas/project')
-
+const Assignment = require('../db/schemas/assignments')
 const ProjectsController = {
 
     fetchAllProjects : async (req,res) => {
         try {
             let temp = []
             const projects = await Project.find()
-
             for (const project in projects) {
-                const { name, ship_date } = projects[project]
-
-                const time = await projects[project].getEstimatedTime()
-                const jobs = await projects[project].getRequiredJobs()
+                // const { name, ship_date } = projects[project]
+                await projects[project].populateData();
+                // console.log(t.products)
+                // t.products.forEach(p => {
+                //     console.log(p.required_jobs)
+                // })
+                // temp.push(t)
+                // const time = await projects[project].getEstimatedTime()
+                // const jobs = await projects[project].getRequiredJobs()
  
-                temp.push({ name: name, estimated_time: time, ship_date: ship_date, required_jobs: jobs })
+                // temp.push({ name: name, estimated_time: time, ship_date: ship_date, required_jobs: jobs })
             }
 
-            res.json(temp)
+            res.json(projects)
         } catch (err) {
             console.log(err)
             res.status(500).json({ message: err })
@@ -26,26 +30,7 @@ const ProjectsController = {
     fetchOneProject : async (req,res) => {
         try {
             const project = await Project.findById(req.params.id)
-                .populate({
-                    path: "products.product",
-                    model: "Product",
-                    populate: {
-                        path: "required_jobs",
-                        model: "Job",
-                        populate: {
-                            path: "tasks",
-                            model: "Task",
-                            populate: {
-                                path: "sub_jobs",
-                                model: "SubJob",
-                                populate: {
-                                    path: "part_ref",
-                                    model: "Inventory"
-                                }
-                            }
-                        }
-                    }
-                })
+            await project.populateData()
             res.json(project)
         } catch (err) {
             res.status(500).json({ message: err })
@@ -56,7 +41,16 @@ const ProjectsController = {
     createNewProject : async (req,res) => {
         try {
             const project = await Project.create(req.body)
-            res.json({ message: `${project.name} created successfully!`})
+            let assignments = await project.setAssignments();
+            for(let assign in assignments) {
+                const assignment = await Assignment.create({project_ref: project._id, task: assignments[assign]})
+                project.assignments.push(assignment._id)
+            }
+
+            await project.save()
+
+            res.json(project)
+            // res.json({ message: `${project.name} created successfully!`})
         } catch (err) {
             if (err.code === 11000) res.status(400).json({ message: `Project: ${req.body.name} already exists. Project names must be unique.`})
             res.status(500).json({ message: err })

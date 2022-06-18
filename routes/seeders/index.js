@@ -1,5 +1,22 @@
 const router = require('express').Router();
 const seeders = require('../../controllers/seed_data')
+const Task = require('../../db/schemas/task')
+const Job = require('../../db/schemas/job')
+const Assignment = require('../../db/schemas/assignments')
+router.post('/task', async (req,res) => {
+    const task = await Task.create(req.body)
+    res.json(task)
+})
+
+router.post('/job', async (req,res) => {
+    const job = await Job.create(req.body)
+    res.json(job)
+})
+
+router.put('/assignments/:id', async (req,res) => {
+    const assignment = await Assignment.findByIdAndUpdate(req.params.id, req.body)
+    res.json(assignment)
+})
 
 // -- Employees -- //
 router.get('/employees/all', seeders.EmployeesController.fetchAllEmployees )

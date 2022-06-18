@@ -15,17 +15,18 @@ const projectSchema = new mongoose.Schema({
         type: Date
     },
     products: [{
-        product: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "product"
-        },
-        num_ordered: Number
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Product"
+    }],
+    assignments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Assignment"
     }]
 })
 
 projectSchema.methods.populateData = async function () {
     let data = await this.populate({
-        path: "products.product",
+        path: "products",
         model: "Product",
         populate: {
             path: "required_jobs",
@@ -41,11 +42,29 @@ projectSchema.methods.populateData = async function () {
                         model: "Inventory"
                     }
                 }
-            }
+            },
         }
     })
+
     return data;
 }
+
+projectSchema.methods.setAssignments = async function () {
+    const data = await this.populateData();
+    let temp = []
+    data.products.forEach(prod => {
+        prod.required_jobs.forEach(job => {
+            job.tasks.forEach(task => {
+                // console.log(task._id)
+                temp.push(task._id)
+            })
+        })
+    })
+
+    return temp;
+}
+
+
 
 projectSchema.methods.getEstimatedTime = async function () {
     const data = await this.populateData()
@@ -69,6 +88,7 @@ projectSchema.methods.getEstimatedTime = async function () {
 projectSchema.methods.getRequiredJobs = async function () {
     const data = await this.populateData()
     let temp = [];
+    data.products.forEach(prod => prod.required_jobs.forEach(job => temp.push(job.job) ))
     data.products.forEach(prod => prod.product.required_jobs.forEach(job => temp.push(job.job) ) )
     return temp;
 }
