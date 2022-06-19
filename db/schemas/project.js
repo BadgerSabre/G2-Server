@@ -71,7 +71,7 @@ projectSchema.methods.getEstimatedTime = async function () {
     let estimated_time = 0;
 
     data.products.forEach(prod => {
-        prod.product.required_jobs.forEach(job => {
+        prod.required_jobs.forEach(job => {
             job.tasks.forEach(task => {
                 task.sub_jobs.forEach(sj => {
                     const time = sj.hours_per_part;
@@ -82,7 +82,7 @@ projectSchema.methods.getEstimatedTime = async function () {
         })
     })
 
-    return estimated_time;
+    return estimated_time.toFixed(2);
 }
 
 projectSchema.methods.getRequiredJobs = async function () {

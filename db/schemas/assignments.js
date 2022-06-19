@@ -20,3 +20,11 @@ const assignmentSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('Assignment', assignmentSchema)
+
+/* 
+    1. Opportunity
+    2. Project (PM Page)
+    3. Supervisor Page
+    4. Assignments
+    5. Production Work Centers (page) Assignments
+*/

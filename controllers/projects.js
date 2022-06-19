@@ -7,20 +7,14 @@ const ProjectsController = {
             let temp = []
             const projects = await Project.find()
             for (const project in projects) {
-                // const { name, ship_date } = projects[project]
+                const { name, ship_date, status, _id } = projects[project]
                 await projects[project].populateData();
-                // console.log(t.products)
-                // t.products.forEach(p => {
-                //     console.log(p.required_jobs)
-                // })
-                // temp.push(t)
-                // const time = await projects[project].getEstimatedTime()
-                // const jobs = await projects[project].getRequiredJobs()
+                const time = await projects[project].getEstimatedTime()
  
-                // temp.push({ name: name, estimated_time: time, ship_date: ship_date, required_jobs: jobs })
+                temp.push({ name: name, estimated_time: time, ship_date: ship_date, status: status, id: _id })
             }
 
-            res.json(projects)
+            res.json(temp)
         } catch (err) {
             console.log(err)
             res.status(500).json({ message: err })
