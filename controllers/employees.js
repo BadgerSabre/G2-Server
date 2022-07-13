@@ -24,6 +24,17 @@ const EmployeeController = {
         }
     },
 
+        // GET employee by Id
+        getEmployeesByWC: async (req, res) => {
+            try {
+                const { wcID } = req.params
+                const employee = await Employee.find({wc_id: wcID})
+                res.json(employee)
+            } catch (error) {
+                res.status(400).json({ message: (error) })
+            }
+        },
+
     // POST create new employee
     // Needs Authorization
     createNewEmployee : async (req, res) => {
