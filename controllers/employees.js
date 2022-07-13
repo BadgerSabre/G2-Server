@@ -54,23 +54,6 @@ const EmployeeController = {
         }
     },
 
-    createNewDemoEmployee : async (req, res) => {
-        // send: dept_num, first_name, last_name, wc_id, pay, salary, start_date
-
-        req.body.email = (req.body.first_name).toLowerCase() + "@g2systems.com"
-        let password = req.body.first_name
-
-        try {
-            let currentEmployees = await Employee.find()
-            req.body.id_num = currentEmployees.length + 1
-            req.body.password = await bcrypt.hash(password, 10)
-            const newEmployee = await Employee.create(req.body)
-            res.json({ message: `${newEmployee.first_name} successfully created`})
-        } catch (error) {
-            res.status(400).json({ message: (error) })
-        }
-    },
-
     // PUT update employee by Id
     // Needs Authorization
     updateEmployeeById : async (req, res) => {
