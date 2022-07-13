@@ -28,6 +28,7 @@ app.use('/departments', require('./routes/departments') )
 app.use('/projects', require('./routes/projects') )
 app.use('/vendors', require('./routes/vendors'))
 app.use('/assignments', require('./routes/assignments') )
+app.use('/jobs', require('./routes/jobs') )
 
 // Database Connection & Server Start -- //
 mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true })
